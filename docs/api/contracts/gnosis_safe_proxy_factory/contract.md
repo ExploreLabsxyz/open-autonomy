@@ -1,11 +1,9 @@
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract"></a>
 # packages.valory.contracts.gnosis`_`safe`_`proxy`_`factory.contract
 
 This module contains the class to connect to an Gnosis Safe Proxy Factory contract.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract"></a>
 ## GnosisSafeProxyFactoryContract Objects
 
 ```python
@@ -14,50 +12,42 @@ class GnosisSafeProxyFactoryContract(Contract)
 
 The Gnosis Safe Proxy Factory contract.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_raw_transaction"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_raw_transaction"></a>
 #### get`_`raw`_`transaction
 
 ```python
-@classmethod
-def get_raw_transaction(cls, ledger_api: LedgerApi, contract_address: str,
-                        **kwargs: Any) -> Optional[JSONLike]
+ | @classmethod
+ | get_raw_transaction(cls, ledger_api: LedgerApi, contract_address: str, **kwargs: Any) -> Optional[JSONLike]
 ```
 
 Get the raw transaction.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_raw_message"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_raw_message"></a>
 #### get`_`raw`_`message
 
 ```python
-@classmethod
-def get_raw_message(cls, ledger_api: LedgerApi, contract_address: str,
-                    **kwargs: Any) -> Optional[bytes]
+ | @classmethod
+ | get_raw_message(cls, ledger_api: LedgerApi, contract_address: str, **kwargs: Any) -> Optional[bytes]
 ```
 
 Get raw message.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_state"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_state"></a>
 #### get`_`state
 
 ```python
-@classmethod
-def get_state(cls, ledger_api: LedgerApi, contract_address: str,
-              **kwargs: Any) -> Optional[JSONLike]
+ | @classmethod
+ | get_state(cls, ledger_api: LedgerApi, contract_address: str, **kwargs: Any) -> Optional[JSONLike]
 ```
 
 Get state.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_deploy_transaction"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.get_deploy_transaction"></a>
 #### get`_`deploy`_`transaction
 
 ```python
-@classmethod
-def get_deploy_transaction(cls, ledger_api: LedgerApi, deployer_address: str,
-                           **kwargs: Any) -> Optional[JSONLike]
+ | @classmethod
+ | get_deploy_transaction(cls, ledger_api: LedgerApi, deployer_address: str, **kwargs: Any) -> Optional[JSONLike]
 ```
 
 Get deploy transaction.
@@ -72,25 +62,12 @@ Get deploy transaction.
 
 an optional JSON-like object.
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.build_tx_deploy_proxy_contract_with_nonce"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.build_tx_deploy_proxy_contract_with_nonce"></a>
 #### build`_`tx`_`deploy`_`proxy`_`contract`_`with`_`nonce
 
 ```python
-@classmethod
-def build_tx_deploy_proxy_contract_with_nonce(
-        cls,
-        ledger_api: EthereumApi,
-        proxy_factory_address: str,
-        master_copy: str,
-        address: str,
-        initializer: bytes,
-        salt_nonce: int,
-        gas: int = MIN_GAS,
-        gas_price: Optional[int] = None,
-        max_fee_per_gas: Optional[int] = None,
-        max_priority_fee_per_gas: Optional[int] = None,
-        nonce: Optional[int] = None) -> Tuple[TxParams, str]
+ | @classmethod
+ | build_tx_deploy_proxy_contract_with_nonce(cls, ledger_api: EthereumApi, proxy_factory_address: str, master_copy: str, address: str, initializer: bytes, salt_nonce: int, gas: int = MIN_GAS, gas_price: Optional[int] = None, max_fee_per_gas: Optional[int] = None, max_priority_fee_per_gas: Optional[int] = None, nonce: Optional[int] = None) -> Tuple[TxParams, str]
 ```
 
 Deploy proxy contract via Proxy Factory using `createProxyWithNonce` (create2)
@@ -113,14 +90,12 @@ Deploy proxy contract via Proxy Factory using `createProxyWithNonce` (create2)
 
 Tuple(tx-hash, tx, deployed contract address)
 
-<a id="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.verify_contract"></a>
-
+<a name="packages.valory.contracts.gnosis_safe_proxy_factory.contract.GnosisSafeProxyFactoryContract.verify_contract"></a>
 #### verify`_`contract
 
 ```python
-@classmethod
-def verify_contract(cls, ledger_api: EthereumApi,
-                    contract_address: str) -> JSONLike
+ | @classmethod
+ | verify_contract(cls, ledger_api: EthereumApi, contract_address: str) -> JSONLike
 ```
 
 Verify the contract's bytecode

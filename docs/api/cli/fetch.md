@@ -1,11 +1,9 @@
-<a id="autonomy.cli.fetch"></a>
-
+<a name="autonomy.cli.fetch"></a>
 # autonomy.cli.fetch
 
 Implementation of the 'autonomy fetch' subcommand.
 
-<a id="autonomy.cli.fetch.fetch"></a>
-
+<a name="autonomy.cli.fetch.fetch"></a>
 #### fetch
 
 ```python
@@ -31,12 +29,9 @@ Implementation of the 'autonomy fetch' subcommand.
     flag_value=SERVICE,
 )
 @click.argument("public-id", type=PublicIdOrHashOrTokenId(), required=True)
-@chain_selection_flag(
-    help_string_format="Use {} chain to resolve the token id.")
+@chain_selection_flag(help_string_format="Use {} chain to resolve the token id.")
 @click.pass_context
-def fetch(click_context: click.Context, public_id: Union[PublicId,
-                                                         int], alias: str,
-          package_type: str, registry: str, chain_type: str) -> None
+fetch(click_context: click.Context, public_id: Union[PublicId, int], alias: str, package_type: str, registry: str, chain_type: str) -> None
 ```
 
 Fetch an agent from the registry.

@@ -1,64 +1,57 @@
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours"></a>
 # packages.valory.skills.transaction`_`settlement`_`abci.behaviours
 
 This module contains the behaviours for the 'abci' skill.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour"></a>
 ## TransactionSettlementBaseBehaviour Objects
 
 ```python
-class TransactionSettlementBaseBehaviour(BaseBehaviour, ABC)
+class TransactionSettlementBaseBehaviour(BaseBehaviour,  ABC)
 ```
 
 Base behaviour for the common apps' skill.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.synchronized_data"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.synchronized_data"></a>
 #### synchronized`_`data
 
 ```python
-@property
-def synchronized_data() -> SynchronizedData
+ | @property
+ | synchronized_data() -> SynchronizedData
 ```
 
 Return the synchronized data.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.params"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.params"></a>
 #### params
 
 ```python
-@property
-def params() -> TransactionParams
+ | @property
+ | params() -> TransactionParams
 ```
 
 Return the params.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.serialized_keepers"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.serialized_keepers"></a>
 #### serialized`_`keepers
 
 ```python
-@staticmethod
-def serialized_keepers(keepers: Deque[str], keeper_retries: int) -> str
+ | @staticmethod
+ | serialized_keepers(keepers: Deque[str], keeper_retries: int) -> str
 ```
 
 Get the keepers serialized.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.get_gas_price_params"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementBaseBehaviour.get_gas_price_params"></a>
 #### get`_`gas`_`price`_`params
 
 ```python
-def get_gas_price_params(tx_body: dict) -> List[str]
+ | get_gas_price_params(tx_body: dict) -> List[str]
 ```
 
 Guess the gas strategy from the transaction params
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.RandomnessTransactionSubmissionBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.RandomnessTransactionSubmissionBehaviour"></a>
 ## RandomnessTransactionSubmissionBehaviour Objects
 
 ```python
@@ -67,44 +60,40 @@ class RandomnessTransactionSubmissionBehaviour(RandomnessBehaviour)
 
 Retrieve randomness.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourA"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourA"></a>
 ## SelectKeeperTransactionSubmissionBehaviourA Objects
 
 ```python
 class SelectKeeperTransactionSubmissionBehaviourA(  # pylint: disable=too-many-ancestors
-        SelectKeeperBehaviour, TransactionSettlementBaseBehaviour)
+    SelectKeeperBehaviour,  TransactionSettlementBaseBehaviour)
 ```
 
 Select the keeper agent.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourA.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourA.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourB"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourB"></a>
 ## SelectKeeperTransactionSubmissionBehaviourB Objects
 
 ```python
 class SelectKeeperTransactionSubmissionBehaviourB(  # pylint: disable=too-many-ancestors
-        SelectKeeperTransactionSubmissionBehaviourA)
+    SelectKeeperTransactionSubmissionBehaviourA)
 ```
 
 Select the keeper b agent.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourB.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourB.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
@@ -122,19 +111,17 @@ Steps:
     - Wait until ABCI application transitions to the next round.
     - Go to the next behaviour (set done event).
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourBAfterTimeout"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SelectKeeperTransactionSubmissionBehaviourBAfterTimeout"></a>
 ## SelectKeeperTransactionSubmissionBehaviourBAfterTimeout Objects
 
 ```python
 class SelectKeeperTransactionSubmissionBehaviourBAfterTimeout(  # pylint: disable=too-many-ancestors
-        SelectKeeperTransactionSubmissionBehaviourB)
+    SelectKeeperTransactionSubmissionBehaviourB)
 ```
 
 Select the keeper b agent after a timeout.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour"></a>
 ## ValidateTransactionBehaviour Objects
 
 ```python
@@ -143,12 +130,11 @@ class ValidateTransactionBehaviour(TransactionSettlementBaseBehaviour)
 
 Validate a transaction.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
@@ -161,18 +147,16 @@ Steps:
 - Wait until ABCI application transitions to the next round.
 - Go to the next behaviour (set done event).
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour.has_transaction_been_sent"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.ValidateTransactionBehaviour.has_transaction_been_sent"></a>
 #### has`_`transaction`_`been`_`sent
 
 ```python
-def has_transaction_been_sent() -> Generator[None, None, Optional[bool]]
+ | has_transaction_been_sent() -> Generator[None, None, Optional[bool]]
 ```
 
 Transaction verification.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour"></a>
 ## CheckTransactionHistoryBehaviour Objects
 
 ```python
@@ -181,51 +165,46 @@ class CheckTransactionHistoryBehaviour(TransactionSettlementBaseBehaviour)
 
 Check the transaction history.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour.history"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour.history"></a>
 #### history
 
 ```python
-@property
-def history() -> List[str]
+ | @property
+ | history() -> List[str]
 ```
 
 Get the history of hashes.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.CheckTransactionHistoryBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.CheckLateTxHashesBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.CheckLateTxHashesBehaviour"></a>
 ## CheckLateTxHashesBehaviour Objects
 
 ```python
 class CheckLateTxHashesBehaviour(  # pylint: disable=too-many-ancestors
-        CheckTransactionHistoryBehaviour)
+    CheckTransactionHistoryBehaviour)
 ```
 
 Check the late-arriving transaction hashes.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.CheckLateTxHashesBehaviour.history"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.CheckLateTxHashesBehaviour.history"></a>
 #### history
 
 ```python
-@property
-def history() -> List[str]
+ | @property
+ | history() -> List[str]
 ```
 
 Get the history of hashes.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour"></a>
 ## SynchronizeLateMessagesBehaviour Objects
 
 ```python
@@ -234,38 +213,34 @@ class SynchronizeLateMessagesBehaviour(TransactionSettlementBaseBehaviour)
 
 Synchronize late-arriving messages behaviour.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.__init__"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.__init__"></a>
 #### `__`init`__`
 
 ```python
-def __init__(**kwargs: Any)
+ | __init__(**kwargs: Any)
 ```
 
 Initialize a `SynchronizeLateMessagesBehaviour`
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.setup"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.setup"></a>
 #### setup
 
 ```python
-def setup() -> None
+ | setup() -> None
 ```
 
 Setup the `SynchronizeLateMessagesBehaviour`.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SynchronizeLateMessagesBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SignatureBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SignatureBehaviour"></a>
 ## SignatureBehaviour Objects
 
 ```python
@@ -274,12 +249,11 @@ class SignatureBehaviour(TransactionSettlementBaseBehaviour)
 
 Signature behaviour.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.SignatureBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.SignatureBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
@@ -290,8 +264,7 @@ Steps:
 - Wait until ABCI application transitions to the next round.
 - Go to the next behaviour (set done event).
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour"></a>
 ## FinalizeBehaviour Objects
 
 ```python
@@ -300,12 +273,11 @@ class FinalizeBehaviour(TransactionSettlementBaseBehaviour)
 
 Finalize behaviour.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator[None, None, None]
+ | async_act() -> Generator[None, None, None]
 ```
 
 Do the action.
@@ -315,12 +287,11 @@ Steps:
 - Otherwise, wait until the next round.
 - If a timeout is hit, set exit A event, otherwise set done event.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour.handle_late_messages"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.FinalizeBehaviour.handle_late_messages"></a>
 #### handle`_`late`_`messages
 
 ```python
-def handle_late_messages(behaviour_id: str, message: Message) -> None
+ | handle_late_messages(behaviour_id: str, message: Message) -> None
 ```
 
 Store a potentially late-arriving message locally.
@@ -330,8 +301,7 @@ Store a potentially late-arriving message locally.
 - `behaviour_id`: the id of the behaviour in which the message belongs to.
 - `message`: the late arriving message to handle.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.ResetBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.ResetBehaviour"></a>
 ## ResetBehaviour Objects
 
 ```python
@@ -340,18 +310,16 @@ class ResetBehaviour(TransactionSettlementBaseBehaviour)
 
 Reset behaviour.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.ResetBehaviour.async_act"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.ResetBehaviour.async_act"></a>
 #### async`_`act
 
 ```python
-def async_act() -> Generator
+ | async_act() -> Generator
 ```
 
 Do the action.
 
-<a id="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementRoundBehaviour"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.behaviours.TransactionSettlementRoundBehaviour"></a>
 ## TransactionSettlementRoundBehaviour Objects
 
 ```python

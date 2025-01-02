@@ -1,11 +1,9 @@
-<a id="autonomy.cli.service"></a>
-
+<a name="autonomy.cli.service"></a>
 # autonomy.cli.service
 
 Implementation of the `autonomy service` command
 
-<a id="autonomy.cli.service.service"></a>
-
+<a name="autonomy.cli.service.service"></a>
 #### service
 
 ```python
@@ -16,8 +14,7 @@ Implementation of the `autonomy service` command
 @sleep_flag
 @dry_run_flag
 @chain_selection_flag()
-def service(ctx: Context, chain_type: str, timeout: float, retries: int,
-            sleep: float, dry_run: bool) -> None
+service(ctx: Context, chain_type: str, timeout: float, retries: int, sleep: float, dry_run: bool) -> None
 ```
 
 Manage on-chain services.

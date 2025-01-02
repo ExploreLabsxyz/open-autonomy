@@ -1,28 +1,22 @@
-<a id="autonomy.cli.helpers.docstring"></a>
-
+<a name="autonomy.cli.helpers.docstring"></a>
 # autonomy.cli.helpers.docstring
 
 Helper for docstring analyser.
 
-<a id="autonomy.cli.helpers.docstring.import_rounds_module"></a>
-
+<a name="autonomy.cli.helpers.docstring.import_rounds_module"></a>
 #### import`_`rounds`_`module
 
 ```python
-def import_rounds_module(module_path: Path,
-                         packages_dir: Optional[Path] = None) -> ModuleType
+import_rounds_module(module_path: Path, packages_dir: Optional[Path] = None) -> ModuleType
 ```
 
 Import module using importlib.import_module
 
-<a id="autonomy.cli.helpers.docstring.analyse_docstrings"></a>
-
+<a name="autonomy.cli.helpers.docstring.analyse_docstrings"></a>
 #### analyse`_`docstrings
 
 ```python
-def analyse_docstrings(module_path: Path,
-                       update: bool = False,
-                       packages_dir: Optional[Path] = None) -> bool
+analyse_docstrings(module_path: Path, update: bool = False, packages_dir: Optional[Path] = None) -> bool
 ```
 
 Process module.

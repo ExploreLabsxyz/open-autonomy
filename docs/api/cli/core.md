@@ -1,5 +1,4 @@
-<a id="autonomy.cli.core"></a>
-
+<a name="autonomy.cli.core"></a>
 # autonomy.cli.core
 
 Core for cli.

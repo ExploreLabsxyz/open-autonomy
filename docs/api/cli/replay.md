@@ -1,22 +1,19 @@
-<a id="autonomy.cli.replay"></a>
-
+<a name="autonomy.cli.replay"></a>
 # autonomy.cli.replay
 
 Develop CLI module.
 
-<a id="autonomy.cli.replay.replay_group"></a>
-
+<a name="autonomy.cli.replay.replay_group"></a>
 #### replay`_`group
 
 ```python
 @click.group(name="replay")
-def replay_group() -> None
+replay_group() -> None
 ```
 
 Replay tools for agent services.
 
-<a id="autonomy.cli.replay.run_agent"></a>
-
+<a name="autonomy.cli.replay.run_agent"></a>
 #### run`_`agent
 
 ```python
@@ -36,13 +33,12 @@ Replay tools for agent services.
     default=REGISTRY_PATH,
     help="Path to registry folder.",
 )
-def run_agent(agent: int, build_path: Path, registry_path: Path) -> None
+run_agent(agent: int, build_path: Path, registry_path: Path) -> None
 ```
 
 Agent runner.
 
-<a id="autonomy.cli.replay.run_tendermint"></a>
-
+<a name="autonomy.cli.replay.run_tendermint"></a>
 #### run`_`tendermint
 
 ```python
@@ -54,7 +50,7 @@ Agent runner.
     default=Path(DEFAULT_BUILD_FOLDER.format(build_hash_id())),
     help="Path to build directory.",
 )
-def run_tendermint(build_dir: Path) -> None
+run_tendermint(build_dir: Path) -> None
 ```
 
 Tendermint runner.

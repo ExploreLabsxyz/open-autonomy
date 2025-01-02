@@ -1,21 +1,18 @@
-<a id="packages.valory.skills.abstract_round_abci.handlers"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers"></a>
 # packages.valory.skills.abstract`_`round`_`abci.handlers
 
 This module contains the handler for the 'abstract_round_abci' skill.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.exception_to_info_msg"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.exception_to_info_msg"></a>
 #### exception`_`to`_`info`_`msg
 
 ```python
-def exception_to_info_msg(exception: Exception) -> str
+exception_to_info_msg(exception: Exception) -> str
 ```
 
 Transform an exception to an info string message.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler"></a>
 ## ABCIRoundHandler Objects
 
 ```python
@@ -24,12 +21,11 @@ class ABCIRoundHandler(ABCIHandler)
 
 ABCI handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.info"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.info"></a>
 #### info
 
 ```python
-def info(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | info(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'info' request.
@@ -50,12 +46,11 @@ As per Tendermint spec (https://github.com/tendermint/spec/blob/038f3e025a19fed9
 
 the response.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.init_chain"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.init_chain"></a>
 #### init`_`chain
 
 ```python
-def init_chain(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | init_chain(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle a message of REQUEST_INIT_CHAIN performative.
@@ -76,63 +71,56 @@ As per Tendermint spec (https://github.com/tendermint/spec/blob/038f3e025a19fed9
 
 the response.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.begin_block"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.begin_block"></a>
 #### begin`_`block
 
 ```python
-def begin_block(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | begin_block(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'begin_block' request.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.check_tx"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.check_tx"></a>
 #### check`_`tx
 
 ```python
-def check_tx(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | check_tx(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'check_tx' request.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.settle_pending_offence"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.settle_pending_offence"></a>
 #### settle`_`pending`_`offence
 
 ```python
-def settle_pending_offence(accused_agent_address: Optional[str],
-                           invalid: bool) -> None
+ | settle_pending_offence(accused_agent_address: Optional[str], invalid: bool) -> None
 ```
 
 Add an invalid pending offence or a no-offence for the given accused agent address, if possible.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.deliver_tx"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.deliver_tx"></a>
 #### deliver`_`tx
 
 ```python
-def deliver_tx(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | deliver_tx(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'deliver_tx' request.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.end_block"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.end_block"></a>
 #### end`_`block
 
 ```python
-def end_block(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | end_block(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'end_block' request.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.commit"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ABCIRoundHandler.commit"></a>
 #### commit
 
 ```python
-def commit(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
+ | commit(message: AbciMessage, dialogue: AbciDialogue) -> AbciMessage
 ```
 
 Handle the 'commit' request.
@@ -154,12 +142,11 @@ Empty request meant to signal to the app it can write state transitions to state
 
 the response.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler"></a>
 ## AbstractResponseHandler Objects
 
 ```python
-class AbstractResponseHandler(Handler, ABC)
+class AbstractResponseHandler(Handler,  ABC)
 ```
 
 Abstract response Handler.
@@ -173,57 +160,53 @@ The concrete classes must set the 'allowed_response_performatives'
 class attribute to the (frozen)set of performative the developer
 wants the handler to handle.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.setup"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.setup"></a>
 #### setup
 
 ```python
-def setup() -> None
+ | setup() -> None
 ```
 
 Set up the handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.teardown"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.teardown"></a>
 #### teardown
 
 ```python
-def teardown() -> None
+ | teardown() -> None
 ```
 
 Tear down the handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.handle"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.AbstractResponseHandler.handle"></a>
 #### handle
 
 ```python
-def handle(message: Message) -> None
+ | handle(message: Message) -> None
 ```
 
 Handle the response message.
 
 Steps:
 1. Try to recover the 'dialogues' instance, for the protocol
-   of this handler, from the skill context. The attribute name used to
-   read the attribute is computed by '_get_dialogues_attribute_name()'
-   method. If no dialogues instance is found, log a message and return.
+of this handler, from the skill context. The attribute name used to
+read the attribute is computed by '_get_dialogues_attribute_name()'
+method. If no dialogues instance is found, log a message and return.
 2. Try to recover the dialogue; if no dialogue is present, log a message
-   and return.
+and return.
 3. Check whether the performative is in the set of allowed performative;
-   if not, log a message and return.
+if not, log a message and return.
 4. Try to recover the callback of the request associated to the response
-   from the 'Requests' model; if no callback is present, log a message
-   and return.
+from the 'Requests' model; if no callback is present, log a message
+and return.
 5. If the above check have passed, then call the callback with the
-   received message.
+received message.
 
 **Arguments**:
 
 - `message`: the message to handle.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.HttpHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.HttpHandler"></a>
 ## HttpHandler Objects
 
 ```python
@@ -232,8 +215,7 @@ class HttpHandler(AbstractResponseHandler)
 
 The HTTP response handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.SigningHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.SigningHandler"></a>
 ## SigningHandler Objects
 
 ```python
@@ -242,8 +224,7 @@ class SigningHandler(AbstractResponseHandler)
 
 Implement the transaction handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.LedgerApiHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.LedgerApiHandler"></a>
 ## LedgerApiHandler Objects
 
 ```python
@@ -252,8 +233,7 @@ class LedgerApiHandler(AbstractResponseHandler)
 
 Implement the ledger handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.ContractApiHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.ContractApiHandler"></a>
 ## ContractApiHandler Objects
 
 ```python
@@ -262,8 +242,7 @@ class ContractApiHandler(AbstractResponseHandler)
 
 Implement the contract api handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler"></a>
 ## TendermintHandler Objects
 
 ```python
@@ -280,8 +259,7 @@ p2p_libp2p or p2p_libp2p_client connection.
 
 This handler does NOT use the ABCI connection.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.LogMessages"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.LogMessages"></a>
 ## LogMessages Objects
 
 ```python
@@ -290,81 +268,73 @@ class LogMessages(Enum)
 
 Log messages used in the TendermintHandler
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.LogMessages.__str__"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.LogMessages.__str__"></a>
 #### `__`str`__`
 
 ```python
-def __str__() -> str
+ | __str__() -> str
 ```
 
 For ease of use in formatted string literals
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.setup"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.setup"></a>
 #### setup
 
 ```python
-def setup() -> None
+ | setup() -> None
 ```
 
 Set up the handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.teardown"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.teardown"></a>
 #### teardown
 
 ```python
-def teardown() -> None
+ | teardown() -> None
 ```
 
 Tear down the handler.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.initial_tm_configs"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.initial_tm_configs"></a>
 #### initial`_`tm`_`configs
 
 ```python
-@property
-def initial_tm_configs() -> Dict[str, Dict[str, Any]]
+ | @property
+ | initial_tm_configs() -> Dict[str, Dict[str, Any]]
 ```
 
 A mapping of the other agents' addresses to their initial Tendermint configuration.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.initial_tm_configs"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.initial_tm_configs"></a>
 #### initial`_`tm`_`configs
 
 ```python
-@initial_tm_configs.setter
-def initial_tm_configs(configs: Dict[str, Dict[str, Any]]) -> None
+ | @initial_tm_configs.setter
+ | initial_tm_configs(configs: Dict[str, Dict[str, Any]]) -> None
 ```
 
 A mapping of the other agents' addresses to their initial Tendermint configuration.
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.dialogues"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.dialogues"></a>
 #### dialogues
 
 ```python
-@property
-def dialogues() -> Optional[TendermintDialogues]
+ | @property
+ | dialogues() -> Optional[TendermintDialogues]
 ```
 
 Tendermint config-sharing request / response protocol dialogues
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.handle"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.TendermintHandler.handle"></a>
 #### handle
 
 ```python
-def handle(message: Message) -> None
+ | handle(message: Message) -> None
 ```
 
 Handle incoming Tendermint config-sharing messages
 
-<a id="packages.valory.skills.abstract_round_abci.handlers.IpfsHandler"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.handlers.IpfsHandler"></a>
 ## IpfsHandler Objects
 
 ```python

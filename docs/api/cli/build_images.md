@@ -1,11 +1,9 @@
-<a id="autonomy.cli.build_images"></a>
-
+<a name="autonomy.cli.build_images"></a>
 # autonomy.cli.build`_`images
 
 Build images.
 
-<a id="autonomy.cli.build_images.build_image"></a>
-
+<a name="autonomy.cli.build_images.build_image"></a>
 #### build`_`image
 
 ```python
@@ -29,14 +27,8 @@ Build images.
     multiple=True,
 )
 @click.option("--version", type=str, help="Specify tag version for the image.")
-@click.option("--dev",
-              is_flag=True,
-              help="Build development image.",
-              default=False)
-@click.option("--pull",
-              is_flag=True,
-              help="Pull latest dependencies.",
-              default=False)
+@click.option("--dev", is_flag=True, help="Build development image.", default=False)
+@click.option("--pull", is_flag=True, help="Pull latest dependencies.", default=False)
 @click.option(
     "-f",
     "--dockerfile",
@@ -48,14 +40,7 @@ Build images.
     help="Specify custom dockerfile for building the agent",
 )
 @image_author_option
-def build_image(agent: Optional[PublicId],
-                service_dir: Optional[Path],
-                dockerfile: Optional[Path],
-                extra_dependencies: Tuple[Dependency, ...],
-                pull: bool = False,
-                dev: bool = False,
-                version: Optional[str] = None,
-                image_author: Optional[str] = None) -> None
+build_image(agent: Optional[PublicId], service_dir: Optional[Path], dockerfile: Optional[Path], extra_dependencies: Tuple[Dependency, ...], pull: bool = False, dev: bool = False, version: Optional[str] = None, image_author: Optional[str] = None) -> None
 ```
 
 Build runtime images for autonomous agents.

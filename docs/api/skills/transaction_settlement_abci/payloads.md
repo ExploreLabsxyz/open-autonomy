@@ -1,11 +1,9 @@
-<a id="packages.valory.skills.transaction_settlement_abci.payloads"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads"></a>
 # packages.valory.skills.transaction`_`settlement`_`abci.payloads
 
 This module contains the transaction payloads for common apps.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.RandomnessPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.RandomnessPayload"></a>
 ## RandomnessPayload Objects
 
 ```python
@@ -15,8 +13,7 @@ class RandomnessPayload(BaseTxPayload)
 
 Represent a transaction payload of type 'randomness'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.SelectKeeperPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.SelectKeeperPayload"></a>
 ## SelectKeeperPayload Objects
 
 ```python
@@ -26,8 +23,7 @@ class SelectKeeperPayload(BaseTxPayload)
 
 Represent a transaction payload of type 'select_keeper'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.ValidatePayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.ValidatePayload"></a>
 ## ValidatePayload Objects
 
 ```python
@@ -37,8 +33,7 @@ class ValidatePayload(BaseTxPayload)
 
 Represent a transaction payload of type 'validate'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.CheckTransactionHistoryPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.CheckTransactionHistoryPayload"></a>
 ## CheckTransactionHistoryPayload Objects
 
 ```python
@@ -48,8 +43,7 @@ class CheckTransactionHistoryPayload(BaseTxPayload)
 
 Represent a transaction payload of type 'check'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.SynchronizeLateMessagesPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.SynchronizeLateMessagesPayload"></a>
 ## SynchronizeLateMessagesPayload Objects
 
 ```python
@@ -59,8 +53,7 @@ class SynchronizeLateMessagesPayload(BaseTxPayload)
 
 Represent a transaction payload of type 'synchronize'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.SignaturePayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.SignaturePayload"></a>
 ## SignaturePayload Objects
 
 ```python
@@ -70,8 +63,7 @@ class SignaturePayload(BaseTxPayload)
 
 Represent a transaction payload of type 'signature'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.FinalizationTxPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.FinalizationTxPayload"></a>
 ## FinalizationTxPayload Objects
 
 ```python
@@ -81,8 +73,7 @@ class FinalizationTxPayload(BaseTxPayload)
 
 Represent a transaction payload of type 'finalization'.
 
-<a id="packages.valory.skills.transaction_settlement_abci.payloads.ResetPayload"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.payloads.ResetPayload"></a>
 ## ResetPayload Objects
 
 ```python

@@ -1,11 +1,9 @@
-<a id="packages.valory.skills.transaction_settlement_abci.models"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models"></a>
 # packages.valory.skills.transaction`_`settlement`_`abci.models
 
 Custom objects for the transaction settlement ABCI application.
 
-<a id="packages.valory.skills.transaction_settlement_abci.models.SharedState"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models.SharedState"></a>
 ## SharedState Objects
 
 ```python
@@ -14,8 +12,7 @@ class SharedState(BaseSharedState)
 
 Keep the current shared state of the skill.
 
-<a id="packages.valory.skills.transaction_settlement_abci.models.MutableParams"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models.MutableParams"></a>
 ## MutableParams Objects
 
 ```python
@@ -25,8 +22,7 @@ class MutableParams(TypeCheckMixin)
 
 Collection for the mutable parameters.
 
-<a id="packages.valory.skills.transaction_settlement_abci.models.GasParams"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models.GasParams"></a>
 ## GasParams Objects
 
 ```python
@@ -36,8 +32,7 @@ class GasParams(BaseParams)
 
 Gas parameters.
 
-<a id="packages.valory.skills.transaction_settlement_abci.models.TransactionParams"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models.TransactionParams"></a>
 ## TransactionParams Objects
 
 ```python
@@ -46,12 +41,11 @@ class TransactionParams(BaseParams)
 
 Transaction settlement agent-specific parameters.
 
-<a id="packages.valory.skills.transaction_settlement_abci.models.TransactionParams.__init__"></a>
-
+<a name="packages.valory.skills.transaction_settlement_abci.models.TransactionParams.__init__"></a>
 #### `__`init`__`
 
 ```python
-def __init__(*args: Any, **kwargs: Any) -> None
+ | __init__(*args: Any, **kwargs: Any) -> None
 ```
 
 Initialize the parameters object.

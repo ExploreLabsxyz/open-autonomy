@@ -1,17 +1,15 @@
-<a id="packages.valory.connections.abci.scripts.genproto"></a>
-
+<a name="packages.valory.connections.abci.scripts.genproto"></a>
 # packages.valory.connections.abci.scripts.genproto
 
 Update Python modules from Tendermint Protobuf files.
 
 NOTE: This code is adapted from the google protobuf Python library. Specifically from the setup.py file.
 
-<a id="packages.valory.connections.abci.scripts.genproto.generate_proto"></a>
-
+<a name="packages.valory.connections.abci.scripts.genproto.generate_proto"></a>
 #### generate`_`proto
 
 ```python
-def generate_proto(source: str) -> None
+generate_proto(source: str) -> None
 ```
 
 Generate a protobuf file.

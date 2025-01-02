@@ -1,11 +1,9 @@
-<a id="autonomy.cli.deploy"></a>
-
+<a name="autonomy.cli.deploy"></a>
 # autonomy.cli.deploy
 
 Deploy CLI module.
 
-<a id="autonomy.cli.deploy.deploy_group"></a>
-
+<a name="autonomy.cli.deploy.deploy_group"></a>
 #### deploy`_`group
 
 ```python
@@ -20,14 +18,12 @@ Deploy CLI module.
     help="File containing environment variable mappings",
 )
 @click.pass_context
-def deploy_group(click_context: click.Context,
-                 env_file: Optional[Path]) -> None
+deploy_group(click_context: click.Context, env_file: Optional[Path]) -> None
 ```
 
 Deploy an agent service.
 
-<a id="autonomy.cli.deploy.build_deployment_command"></a>
-
+<a name="autonomy.cli.deploy.build_deployment_command"></a>
 #### build`_`deployment`_`command
 
 ```python
@@ -85,9 +81,9 @@ Deploy an agent service.
     help="Logging level for runtime.",
     default=INFO,
 )
-@click.option("--packages-dir",
-              type=click.Path(),
-              help="Path to packages dir (Use with dev mode)")
+@click.option(
+    "--packages-dir", type=click.Path(), help="Path to packages dir (Use with dev mode)"
+)
 @click.option(
     "--open-aea-dir",
     type=click.Path(),
@@ -119,9 +115,7 @@ Deploy an agent service.
     default=False,
     help="Use local tendermint chain setup.",
 )
-@click.option("--image-version",
-              type=str,
-              help="Define runtime image version.")
+@click.option("--image-version", type=str, help="Define runtime image version.")
 @click.option(
     "--agent-cpu-request",
     type=float,
@@ -157,36 +151,12 @@ Deploy an agent service.
 @password_option(confirmation_prompt=True)
 @image_author_option
 @click.pass_context
-def build_deployment_command(
-        click_context: click.Context,
-        keys_file: Optional[Path],
-        deployment_type: str,
-        output_dir: Optional[Path],
-        dev_mode: bool,
-        registry: str,
-        mkdir: List[str],
-        number_of_agents: Optional[int] = None,
-        number_of_services: int = 1,
-        password: Optional[str] = None,
-        open_aea_dir: Optional[Path] = None,
-        packages_dir: Optional[Path] = None,
-        log_level: str = INFO,
-        aev: bool = False,
-        image_version: Optional[str] = None,
-        use_hardhat: bool = False,
-        use_acn: bool = False,
-        use_tm_testnet_setup: bool = False,
-        image_author: Optional[str] = None,
-        agent_cpu_limit: Optional[float] = None,
-        agent_memory_limit: Optional[int] = None,
-        agent_cpu_request: Optional[float] = None,
-        agent_memory_request: Optional[int] = None) -> None
+build_deployment_command(click_context: click.Context, keys_file: Optional[Path], deployment_type: str, output_dir: Optional[Path], dev_mode: bool, registry: str, mkdir: List[str], number_of_agents: Optional[int] = None, number_of_services: int = 1, password: Optional[str] = None, open_aea_dir: Optional[Path] = None, packages_dir: Optional[Path] = None, log_level: str = INFO, aev: bool = False, image_version: Optional[str] = None, use_hardhat: bool = False, use_acn: bool = False, use_tm_testnet_setup: bool = False, image_author: Optional[str] = None, agent_cpu_limit: Optional[float] = None, agent_memory_limit: Optional[int] = None, agent_cpu_request: Optional[float] = None, agent_memory_request: Optional[int] = None) -> None
 ```
 
 Build deployment setup for n agents.
 
-<a id="autonomy.cli.deploy.run"></a>
-
+<a name="autonomy.cli.deploy.run"></a>
 #### run
 
 ```python
@@ -227,14 +197,12 @@ Build deployment setup for n agents.
     help="Use docker as a backend. (default)",
     default=True,
 )
-def run(build_dir: Path, no_recreate: bool, remove_orphans: bool, detach: bool,
-        deployment_type: str) -> None
+run(build_dir: Path, no_recreate: bool, remove_orphans: bool, detach: bool, deployment_type: str) -> None
 ```
 
 Run deployment.
 
-<a id="autonomy.cli.deploy.stop"></a>
-
+<a name="autonomy.cli.deploy.stop"></a>
 #### stop
 
 ```python
@@ -244,26 +212,20 @@ Run deployment.
     type=click.Path(),
     help="Path to the deployment build directory.",
 )
-def stop(build_dir: Path) -> None
+stop(build_dir: Path) -> None
 ```
 
 Stop a running deployment.
 
-<a id="autonomy.cli.deploy.run_deployment_from_token"></a>
-
+<a name="autonomy.cli.deploy.run_deployment_from_token"></a>
 #### run`_`deployment`_`from`_`token
 
 ```python
 @deploy_group.command(name="from-token")
 @click.argument("token_id", type=int)
 @click.argument("keys_file", type=click.Path())
-@click.option("--n",
-              type=int,
-              help="Number of agents to include in the build.")
-@click.option("--skip-image",
-              is_flag=True,
-              default=False,
-              help="Skip building images.")
+@click.option("--n", type=int, help="Number of agents to include in the build.")
+@click.option("--skip-image", is_flag=True, default=False, help="Skip building images.")
 @click.option(
     "--aev",
     is_flag=True,
@@ -318,26 +280,10 @@ Stop a running deployment.
     help="Set agent memory usage limit.",
     default=DEFAULT_AGENT_MEMORY_LIMIT,
 )
-@chain_selection_flag(
-    help_string_format="Use {} chain to resolve the token id.")
+@chain_selection_flag(help_string_format="Use {} chain to resolve the token id.")
 @click.pass_context
 @password_option(confirmation_prompt=True)
-def run_deployment_from_token(
-        click_context: click.Context,
-        token_id: int,
-        keys_file: Path,
-        chain_type: ChainType,
-        skip_image: bool,
-        n: Optional[int],
-        deployment_type: str,
-        no_deploy: bool,
-        detach: bool,
-        aev: bool = False,
-        password: Optional[str] = None,
-        agent_cpu_limit: Optional[float] = None,
-        agent_memory_limit: Optional[int] = None,
-        agent_cpu_request: Optional[float] = None,
-        agent_memory_request: Optional[int] = None) -> None
+run_deployment_from_token(click_context: click.Context, token_id: int, keys_file: Path, chain_type: ChainType, skip_image: bool, n: Optional[int], deployment_type: str, no_deploy: bool, detach: bool, aev: bool = False, password: Optional[str] = None, agent_cpu_limit: Optional[float] = None, agent_memory_limit: Optional[int] = None, agent_cpu_request: Optional[float] = None, agent_memory_request: Optional[int] = None) -> None
 ```
 
 Run service deployment.
