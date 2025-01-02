@@ -107,7 +107,7 @@ A quick overview of the ABCI protocol is depicted in the diagram below. See the 
 <figcaption>Overview of the flow of messages via the ABCI protocol</figcaption>
 </figure>
 
-## ABCI Apps and the [Open Autonomy](https://docs.autonolas.network/) framework
+## ABCI Apps and the [Open Autonomy](https://explorelabsxyz.github.io/open-autonomy/) framework
 
 The reader might have noticed that we have used the concepts of "reactive callbacks" from the CometBFT blockchain to the ABCI App, and "proactive calls" from the ABCI App to the blockchain.
 This is by no means a coincidence with the architecture of an [AEA](./aea.md): the former are associated to reactive Handlers, whereas the latter are associated to proactive Behaviours in an AEA Skill.

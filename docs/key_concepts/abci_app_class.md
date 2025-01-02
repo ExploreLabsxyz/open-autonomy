@@ -2,7 +2,7 @@
 
 !!!note
     For clarity, the snippets of code presented here are a simplified version of the actual
-    implementation. We refer the reader to the [Open Autonomy API](https://docs.autonolas.network/open-autonomy/api/) for the complete details.
+    implementation. We refer the reader to the [Open Autonomy API](https://explorelabsxyz.github.io/open-autonomy/api/) for the complete details.
 
 The `AbciApp` abstract class provides the necessary interface for implementation of [FSM App](./fsm_app_introduction.md)s. Concrete implementations of the `AbciApp` class requires that the
 developer implement the class attributes `initial_round_cls`,
