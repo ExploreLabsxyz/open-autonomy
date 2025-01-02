@@ -1,22 +1,19 @@
-<a id="autonomy.cli.hash"></a>
-
+<a name="autonomy.cli.hash"></a>
 # autonomy.cli.hash
 
 Override for hash command.
 
-<a id="autonomy.cli.hash.hash_group"></a>
-
+<a name="autonomy.cli.hash.hash_group"></a>
 #### hash`_`group
 
 ```python
 @click.group(name="hash")
-def hash_group() -> None
+hash_group() -> None
 ```
 
 Hashing utils.
 
-<a id="autonomy.cli.hash.generate_all"></a>
-
+<a name="autonomy.cli.hash.generate_all"></a>
 #### generate`_`all
 
 ```python
@@ -28,8 +25,7 @@ Hashing utils.
 )
 @click.option("--vendor", type=str)
 @click.option("--no-wrap", is_flag=True)
-def generate_all(packages_dir: Path, vendor: Optional[str],
-                 no_wrap: bool) -> None
+generate_all(packages_dir: Path, vendor: Optional[str], no_wrap: bool) -> None
 ```
 
 Generate IPFS hashes.

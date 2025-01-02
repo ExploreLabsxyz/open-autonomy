@@ -1,11 +1,9 @@
-<a id="packages.valory.skills.registration_abci.payloads"></a>
-
+<a name="packages.valory.skills.registration_abci.payloads"></a>
 # packages.valory.skills.registration`_`abci.payloads
 
 This module contains the transaction payloads for common apps.
 
-<a id="packages.valory.skills.registration_abci.payloads.RegistrationPayload"></a>
-
+<a name="packages.valory.skills.registration_abci.payloads.RegistrationPayload"></a>
 ## RegistrationPayload Objects
 
 ```python

@@ -1,11 +1,9 @@
-<a id="autonomy.cli.mint"></a>
-
+<a name="autonomy.cli.mint"></a>
 # autonomy.cli.mint
 
 Mint command group definitions.
 
-<a id="autonomy.cli.mint.mint"></a>
-
+<a name="autonomy.cli.mint.mint"></a>
 #### mint
 
 ```python
@@ -16,14 +14,12 @@ Mint command group definitions.
 @retries_flag
 @sleep_flag
 @dry_run_flag
-def mint(ctx: Context, chain_type: str, timeout: float, retries: int,
-         sleep: float, dry_run: bool) -> None
+mint(ctx: Context, chain_type: str, timeout: float, retries: int, sleep: float, dry_run: bool) -> None
 ```
 
 Mint component on-chain.
 
-<a id="autonomy.cli.mint.protocol"></a>
-
+<a name="autonomy.cli.mint.protocol"></a>
 #### protocol
 
 ```python
@@ -36,20 +32,12 @@ Mint component on-chain.
 @owner_flag
 @update_flag
 @pass_ctx
-def protocol(ctx: Context,
-             package_path: Path,
-             key: Path,
-             password: Optional[str],
-             nft: Optional[Union[Path, IPFSHash]],
-             owner: Optional[str],
-             update: Optional[int],
-             hwi: bool = False) -> None
+protocol(ctx: Context, package_path: Path, key: Path, password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], hwi: bool = False) -> None
 ```
 
 Mint a protocol component.
 
-<a id="autonomy.cli.mint.contract"></a>
-
+<a name="autonomy.cli.mint.contract"></a>
 #### contract
 
 ```python
@@ -62,20 +50,12 @@ Mint a protocol component.
 @owner_flag
 @update_flag
 @pass_ctx
-def contract(ctx: Context,
-             package_path: Path,
-             key: Path,
-             password: Optional[str],
-             nft: Optional[Union[Path, IPFSHash]],
-             owner: Optional[str],
-             update: Optional[int],
-             hwi: bool = False) -> None
+contract(ctx: Context, package_path: Path, key: Path, password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], hwi: bool = False) -> None
 ```
 
 Mint a contract component.
 
-<a id="autonomy.cli.mint.connection"></a>
-
+<a name="autonomy.cli.mint.connection"></a>
 #### connection
 
 ```python
@@ -88,20 +68,12 @@ Mint a contract component.
 @owner_flag
 @update_flag
 @pass_ctx
-def connection(ctx: Context,
-               package_path: Path,
-               key: Path,
-               password: Optional[str],
-               nft: Optional[Union[Path, IPFSHash]],
-               owner: Optional[str],
-               update: Optional[int],
-               hwi: bool = False) -> None
+connection(ctx: Context, package_path: Path, key: Path, password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], hwi: bool = False) -> None
 ```
 
 Mint a connection component.
 
-<a id="autonomy.cli.mint.skill"></a>
-
+<a name="autonomy.cli.mint.skill"></a>
 #### skill
 
 ```python
@@ -114,20 +86,12 @@ Mint a connection component.
 @owner_flag
 @update_flag
 @pass_ctx
-def skill(ctx: Context,
-          package_path: Path,
-          key: Path,
-          password: Optional[str],
-          nft: Optional[Union[Path, IPFSHash]],
-          owner: Optional[str],
-          update: Optional[int],
-          hwi: bool = False) -> None
+skill(ctx: Context, package_path: Path, key: Path, password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], hwi: bool = False) -> None
 ```
 
 Mint a skill component.
 
-<a id="autonomy.cli.mint.agent"></a>
-
+<a name="autonomy.cli.mint.agent"></a>
 #### agent
 
 ```python
@@ -140,20 +104,12 @@ Mint a skill component.
 @owner_flag
 @update_flag
 @pass_ctx
-def agent(ctx: Context,
-          package_path: Path,
-          key: Path,
-          password: Optional[str],
-          nft: Optional[Union[Path, IPFSHash]],
-          owner: Optional[str],
-          update: Optional[int],
-          hwi: bool = False) -> None
+agent(ctx: Context, package_path: Path, key: Path, password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], hwi: bool = False) -> None
 ```
 
 Mint an agent.
 
-<a id="autonomy.cli.mint.service"></a>
-
+<a name="autonomy.cli.mint.service"></a>
 #### service
 
 ```python
@@ -193,19 +149,7 @@ Mint an agent.
     type=int,
     help="Threshold for the minimum numbers required to run the service",
 )
-def service(ctx: Context,
-            package_path: Path,
-            key: Path,
-            agent_id: int,
-            number_of_slots: int,
-            cost_of_bond: int,
-            threshold: Optional[int],
-            password: Optional[str],
-            nft: Optional[Union[Path, IPFSHash]],
-            owner: Optional[str],
-            update: Optional[int],
-            token: Optional[str],
-            hwi: bool = False) -> None
+service(ctx: Context, package_path: Path, key: Path, agent_id: int, number_of_slots: int, cost_of_bond: int, threshold: Optional[int], password: Optional[str], nft: Optional[Union[Path, IPFSHash]], owner: Optional[str], update: Optional[int], token: Optional[str], hwi: bool = False) -> None
 ```
 
 Mint a service

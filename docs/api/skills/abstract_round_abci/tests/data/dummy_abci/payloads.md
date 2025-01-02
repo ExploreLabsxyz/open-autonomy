@@ -1,11 +1,9 @@
-<a id="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads"></a>
 # packages.valory.skills.abstract`_`round`_`abci.tests.data.dummy`_`abci.payloads
 
 This module contains the transaction payloads of the DummyAbciApp.
 
-<a id="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyStartingPayload"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyStartingPayload"></a>
 ## DummyStartingPayload Objects
 
 ```python
@@ -15,8 +13,7 @@ class DummyStartingPayload(BaseTxPayload)
 
 Represent a transaction payload for the DummyStartingRound.
 
-<a id="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyRandomnessPayload"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyRandomnessPayload"></a>
 ## DummyRandomnessPayload Objects
 
 ```python
@@ -26,8 +23,7 @@ class DummyRandomnessPayload(BaseTxPayload)
 
 Represent a transaction payload for the DummyRandomnessRound.
 
-<a id="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyKeeperSelectionPayload"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyKeeperSelectionPayload"></a>
 ## DummyKeeperSelectionPayload Objects
 
 ```python
@@ -37,8 +33,7 @@ class DummyKeeperSelectionPayload(BaseTxPayload)
 
 Represent a transaction payload for the DummyKeeperSelectionRound.
 
-<a id="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyFinalPayload"></a>
-
+<a name="packages.valory.skills.abstract_round_abci.tests.data.dummy_abci.payloads.DummyFinalPayload"></a>
 ## DummyFinalPayload Objects
 
 ```python

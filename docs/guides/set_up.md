@@ -107,7 +107,7 @@ This is roughly how your workspace should look like:
 For convenience, we provide a **Dev template** repository that you can fork and clone for your Open Autonomy projects, and use it as your workspace folder:
 
 <figure markdown>
-[ https://github.com/valory-xyz/dev-template ](https://github.com/valory-xyz/dev-template)
+[ https://github.com/ExploreLabsxyz/dev-template ](https://github.com/ExploreLabsxyz/dev-template)
 </figure>
 
 The **Dev template** comes with:

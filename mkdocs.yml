@@ -269,7 +269,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/ExploreLabsxyz
+      link: https://github.com/ExploreLabsxyz/open-autonomy
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/autonolas
     - icon: fontawesome/brands/discord

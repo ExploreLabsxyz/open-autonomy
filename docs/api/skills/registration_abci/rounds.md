@@ -1,11 +1,9 @@
-<a id="packages.valory.skills.registration_abci.rounds"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds"></a>
 # packages.valory.skills.registration`_`abci.rounds
 
 This module contains the data classes for common apps ABCI application.
 
-<a id="packages.valory.skills.registration_abci.rounds.Event"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.Event"></a>
 ## Event Objects
 
 ```python
@@ -14,8 +12,7 @@ class Event(Enum)
 
 Event enumeration for the price estimation demo.
 
-<a id="packages.valory.skills.registration_abci.rounds.FinishedRegistrationRound"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.FinishedRegistrationRound"></a>
 ## FinishedRegistrationRound Objects
 
 ```python
@@ -24,8 +21,7 @@ class FinishedRegistrationRound(DegenerateRound)
 
 A round representing that agent registration has finished
 
-<a id="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound"></a>
 ## RegistrationStartupRound Objects
 
 ```python
@@ -36,29 +32,26 @@ A round in which the agents get registered.
 
 This round waits until all agents have registered.
 
-<a id="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound.params"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound.params"></a>
 #### params
 
 ```python
-@property
-def params() -> BaseParams
+ | @property
+ | params() -> BaseParams
 ```
 
 Return the params.
 
-<a id="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound.end_block"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.RegistrationStartupRound.end_block"></a>
 #### end`_`block
 
 ```python
-def end_block() -> Optional[Tuple[BaseSynchronizedData, Event]]
+ | end_block() -> Optional[Tuple[BaseSynchronizedData, Event]]
 ```
 
 Process the end of the block.
 
-<a id="packages.valory.skills.registration_abci.rounds.RegistrationRound"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.RegistrationRound"></a>
 ## RegistrationRound Objects
 
 ```python
@@ -70,18 +63,16 @@ A round in which the agents get registered.
 This rounds waits until the threshold of agents has been reached
 and then a further x block confirmations.
 
-<a id="packages.valory.skills.registration_abci.rounds.RegistrationRound.end_block"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.RegistrationRound.end_block"></a>
 #### end`_`block
 
 ```python
-def end_block() -> Optional[Tuple[BaseSynchronizedData, Event]]
+ | end_block() -> Optional[Tuple[BaseSynchronizedData, Event]]
 ```
 
 Process the end of the block.
 
-<a id="packages.valory.skills.registration_abci.rounds.AgentRegistrationAbciApp"></a>
-
+<a name="packages.valory.skills.registration_abci.rounds.AgentRegistrationAbciApp"></a>
 ## AgentRegistrationAbciApp Objects
 
 ```python
