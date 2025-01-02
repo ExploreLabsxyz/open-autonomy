@@ -289,6 +289,9 @@ autonomy deploy from-token [OPTIONS] TOKEN_ID KEYS_FILE
 `--agent-memory-limit INTEGER`
 :   Set agent memory usage limit.
 
+`--number-of-services INTEGER`
+:   Number of service deployments to build (default: 1). Each service gets its own `abci_build_*` folder.
+
 `--kubernetes`
 :   Use kubernetes as a backend.
   
